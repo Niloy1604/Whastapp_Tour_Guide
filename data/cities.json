@@ -41,34 +41,6 @@
       "state": "Rajasthan",
       "popular_areas": ["Hawa Mahal", "Amber Fort", "City Palace", "Jantar Mantar"],
       "cultural_significance": "Pink City famous for royal palaces and forts"
-    },
-    {
-      "name": "Agra",
-      "aliases": ["आगरा", "আগরা"],
-      "state": "Uttar Pradesh",
-      "popular_areas": ["Taj Mahal", "Agra Fort", "Fatehpur Sikri", "Mehtab Bagh"],
-      "cultural_significance": "Home to the iconic Taj Mahal"
-    },
-    {
-      "name": "Goa",
-      "aliases": ["गोवा", "গোয়া"],
-      "state": "Goa",
-      "popular_areas": ["Baga Beach", "Basilica of Bom Jesus", "Anjuna Beach", "Dudhsagar Falls"],
-      "cultural_significance": "Coastal paradise with Portuguese heritage"
-    },
-    {
-      "name": "Hyderabad",
-      "aliases": ["हैदराबाद", "হায়দরাবাদ"],
-      "state": "Telangana",
-      "popular_areas": ["Charminar", "Golconda Fort", "Hussain Sagar", "Ramoji Film City"],
-      "cultural_significance": "City of pearls and biryani"
-    },
-    {
-      "name": "Pune",
-      "aliases": ["पुणे", "পুনে"],
-      "state": "Maharashtra",
-      "popular_areas": ["Shaniwar Wada", "Aga Khan Palace", "Sinhagad Fort", "Osho Ashram"],
-      "cultural_significance": "Oxford of the East and IT hub"
     }
   ]
 }

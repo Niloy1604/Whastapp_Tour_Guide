@@ -1,11 +1,11 @@
 import re
 from langdetect import detect
 from textblob import TextBlob
-from googletrans import Translator
+from deep_translator import GoogleTranslator
 
 class LanguageDetector:
     def __init__(self):
-        self.translator = Translator()
+        self.supported_languages = ['en', 'hi', 'bn']
         self.language_patterns = {
             'hi': [
                 r'[\u0900-\u097F]+',  # Devanagari script
@@ -34,21 +34,21 @@ class LanguageDetector:
         # Method 2: langdetect library
         try:
             detected = detect(text)
-            if detected in ['hi', 'bn', 'en']:
+            if detected in self.supported_languages:
                 return detected
-        except:
-            pass
-        
-        # Method 3: Google Translate detection
-        try:
-            result = self.translator.detect(text)
-            if result.lang in ['hi', 'bn', 'en']:
-                return result.lang
         except:
             pass
         
         # Default to English
         return 'en'
+    
+    def translate_to_english(self, text):
+        """Translate text to English using deep-translator"""
+        try:
+            return GoogleTranslator(source='auto', target='en').translate(text)
+        except Exception as e:
+            print(f"Translation error: {e}")
+            return text
     
     def is_code_mixed(self, text):
         """Check if text contains multiple languages"""

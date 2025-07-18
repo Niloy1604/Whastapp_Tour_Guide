@@ -28,7 +28,6 @@ class Config:
     
     # Cache Settings
     CACHE_TIMEOUT = 7200  # 2 hours
-    MAX_CACHE_SIZE = 1000
     
     # API Keys
     GOOGLE_CLOUD_API_KEY = os.getenv('GOOGLE_CLOUD_API_KEY')

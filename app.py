@@ -116,7 +116,7 @@ class CityChatBot:
             mood = self.mood_detector.detect_mood(message_body, language)
             if audio_features:
                 voice_mood = self.mood_detector.detect_from_voice_features(audio_features)
-                # Combine text and voice mood (simple average)
+                # Combine text and voice mood
                 mood = voice_mood if voice_mood != 'curious' else mood
             
             # Extract city
@@ -252,9 +252,9 @@ class CityChatBot:
     def get_next_actions(self, language):
         """Get next action options"""
         next_actions = {
-            'en': "What next?\n🗺️ Type 'directions' for route\n🎯 Type 'more' for other places\n🏠 Type 'new' for different city",
-            'hi': "आगे क्या?\n🗺️ रास्ता जानने के लिए 'directions' टाइप करें\n🎯 अन्य स्थानों के लिए 'more' टाइप करें\n🏠 दूसरे शहर के लिए 'new' टाइप करें",
-            'bn': "পরবর্তী কি?\n🗺️ রুটের জন্য 'directions' টাইপ করুন\n🎯 অন্য স্থানের জন্য 'more' টাইপ করুন\n🏠 ভিন্ন শহরের জন্য 'new' টাইপ করুন"
+            'en': "What next?\n🗺️ Type 'more' for other places\n🏠 Type 'new' for different city",
+            'hi': "आगे क्या?\n🗺️ अन्य स्थानों के लिए 'more' टाइप करें\n🏠 दूसरे शहर के लिए 'new' टाइप करें",
+            'bn': "পরবর্তী কি?\n🗺️ অন্য স্থানের জন্য 'more' টাইপ করুন\n🏠 ভিন্ন শহরের জন্য 'new' টাইপ করুন"
         }
         
         return next_actions.get(language, next_actions['en'])
@@ -277,7 +277,6 @@ def webhook():
         user_id = message_data.get('From', '')
         message_body = message_data.get('Body', '')
         media_url = message_data.get('MediaUrl0', '')
-        message_type = message_data.get('MessageType', 'text')
         
         # Validate phone number
         if not ValidationHelper.validate_phone_number(user_id):
@@ -312,16 +311,6 @@ def health_check():
         'cache_stats': cache_service.get_cache_stats()
     })
 
-@app.route('/preload-cache', methods=['POST'])
-def preload_cache():
-    """Preload cache with popular combinations"""
-    try:
-        cache_service.preload_popular_combinations()
-        return jsonify({'status': 'success', 'message': 'Cache preloaded successfully'})
-    except Exception as e:
-        logger.error(f"Cache preload error: {e}")
-        return jsonify({'error': 'Cache preload failed'}), 500
-
 @app.route('/stats', methods=['GET'])
 def get_stats():
     """Get application statistics"""
@@ -337,14 +326,6 @@ def get_stats():
         return jsonify({'error': 'Unable to get stats'}), 500
 
 if __name__ == '__main__':
-    # Preload cache on startup
-    try:
-        cache_service.preload_popular_combinations()
-        logger.info("Cache preloaded successfully")
-    except Exception as e:
-        logger.warning(f"Cache preload failed: {e}")
-    
     # Run app
     port = int(os.environ.get('PORT', 5000))
     app.run(host='0.0.0.0', port=port, debug=Config.DEBUG)
-

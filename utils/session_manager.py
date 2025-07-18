@@ -5,8 +5,13 @@ from config import Config
 
 class SessionManager:
     def __init__(self):
-        self.redis_client = redis.from_url(Config.REDIS_URL, password=Config.REDIS_PASSWORD)
-        self.session_timeout = Config.SESSION_TIMEOUT
+        try:
+            self.redis_client = redis.from_url(Config.REDIS_URL)
+            self.session_timeout = Config.SESSION_TIMEOUT
+        except Exception as e:
+            print(f"Redis connection error: {e}")
+            self.redis_client = None
+            self.memory_sessions = {}
     
     def get_session_key(self, user_id):
         """Generate session key"""
@@ -14,23 +19,32 @@ class SessionManager:
     
     def get_session(self, user_id):
         """Get user session"""
+        if self.redis_client:
+            return self._get_redis_session(user_id)
+        else:
+            return self._get_memory_session(user_id)
+    
+    def _get_redis_session(self, user_id):
+        """Get session from Redis"""
         try:
             session_key = self.get_session_key(user_id)
             session_data = self.redis_client.get(session_key)
             
             if session_data:
                 session = json.loads(session_data)
-                # Check if session is expired
-                last_activity = datetime.fromisoformat(session['last_activity'])
-                if datetime.now() - last_activity > timedelta(seconds=self.session_timeout):
-                    self.delete_session(user_id)
-                    return self.create_session(user_id)
                 return session
             else:
                 return self.create_session(user_id)
                 
         except Exception as e:
             print(f"Session retrieval error: {e}")
+            return self.create_session(user_id)
+    
+    def _get_memory_session(self, user_id):
+        """Get session from memory (fallback)"""
+        if user_id in self.memory_sessions:
+            return self.memory_sessions[user_id]
+        else:
             return self.create_session(user_id)
     
     def create_session(self, user_id):
@@ -53,19 +67,19 @@ class SessionManager:
     def update_session(self, user_id, updates):
         """Update session with new data"""
         try:
-            session_key = self.get_session_key(user_id)
             session = self.get_session(user_id)
-            
-            # Update with new data
             session.update(updates)
             session['last_activity'] = datetime.now().isoformat()
             
-            # Save to Redis
-            self.redis_client.setex(
-                session_key,
-                self.session_timeout,
-                json.dumps(session)
-            )
+            if self.redis_client:
+                session_key = self.get_session_key(user_id)
+                self.redis_client.setex(
+                    session_key,
+                    self.session_timeout,
+                    json.dumps(session)
+                )
+            else:
+                self.memory_sessions[user_id] = session
             
             return session
             
@@ -76,8 +90,12 @@ class SessionManager:
     def delete_session(self, user_id):
         """Delete user session"""
         try:
-            session_key = self.get_session_key(user_id)
-            self.redis_client.delete(session_key)
+            if self.redis_client:
+                session_key = self.get_session_key(user_id)
+                self.redis_client.delete(session_key)
+            else:
+                if user_id in self.memory_sessions:
+                    del self.memory_sessions[user_id]
             return True
         except Exception as e:
             print(f"Session deletion error: {e}")
@@ -86,34 +104,12 @@ class SessionManager:
     def get_active_sessions(self):
         """Get count of active sessions"""
         try:
-            pattern = "session:*"
-            keys = self.redis_client.keys(pattern)
-            return len(keys)
+            if self.redis_client:
+                pattern = "session:*"
+                keys = self.redis_client.keys(pattern)
+                return len(keys)
+            else:
+                return len(self.memory_sessions)
         except Exception as e:
             print(f"Active sessions error: {e}")
-            return 0
-    
-    def cleanup_expired_sessions(self):
-        """Clean up expired sessions"""
-        try:
-            pattern = "session:*"
-            keys = self.redis_client.keys(pattern)
-            
-            expired_count = 0
-            for key in keys:
-                try:
-                    session_data = self.redis_client.get(key)
-                    if session_data:
-                        session = json.loads(session_data)
-                        last_activity = datetime.fromisoformat(session['last_activity'])
-                        if datetime.now() - last_activity > timedelta(seconds=self.session_timeout):
-                            self.redis_client.delete(key)
-                            expired_count += 1
-                except:
-                    continue
-            
-            return expired_count
-            
-        except Exception as e:
-            print(f"Session cleanup error: {e}")
             return 0

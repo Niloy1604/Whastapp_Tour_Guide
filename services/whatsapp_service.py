@@ -1,7 +1,6 @@
 from twilio.rest import Client
 from twilio.twiml.messaging_response import MessagingResponse
 import requests
-import json
 from config import Config
 
 class WhatsAppService:
@@ -12,20 +11,19 @@ class WhatsAppService:
     def send_message(self, to_number, message):
         """Send text message via WhatsApp"""
         try:
-            message = self.client.messages.create(
+            message_obj = self.client.messages.create(
                 body=message,
                 from_=self.from_number,
                 to=to_number
             )
-            return message.sid
+            return message_obj.sid
         except Exception as e:
             print(f"Error sending message: {e}")
             return None
     
     def send_interactive_message(self, to_number, recommendations, language='en'):
-        """Send interactive message with buttons"""
+        """Send interactive message with menu"""
         try:
-            # Format recommendations as text with menu
             message_text = ""
             for rec in recommendations:
                 message_text += f"{rec['full_text']}\n"
@@ -37,24 +35,10 @@ class WhatsAppService:
             }
             
             message_text += menu_text.get(language, menu_text['en'])
-            
             return self.send_message(to_number, message_text)
             
         except Exception as e:
             print(f"Error sending interactive message: {e}")
-            return None
-    
-    def send_audio_message(self, to_number, audio_url):
-        """Send audio message via WhatsApp"""
-        try:
-            message = self.client.messages.create(
-                media_url=[audio_url],
-                from_=self.from_number,
-                to=to_number
-            )
-            return message.sid
-        except Exception as e:
-            print(f"Error sending audio message: {e}")
             return None
     
     def download_media(self, media_url):

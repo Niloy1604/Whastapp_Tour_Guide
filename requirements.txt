@@ -8,7 +8,7 @@ speechrecognition==3.10.0
 pydub==0.25.1
 langdetect==1.0.9
 textblob==0.17.1
-googletrans==4.0.0rc1
+deep-translator==1.11.4     # Instead of googletrans==4.0.0rc1
 whisper==1.1.10
 librosa==0.10.1
 numpy==1.24.3
