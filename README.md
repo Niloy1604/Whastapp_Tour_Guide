@@ -157,5 +157,5 @@ MIT License – Free for educational & hackathon use.
 
 ## Authors & Support
 
-Built by  and team.  
+Built by Code Eclipse.  
 Pull requests and suggestions welcome!
