@@ -1,0 +1,74 @@
+{
+  "cities": [
+    {
+      "name": "Delhi",
+      "aliases": ["New Delhi", "दिल्ली", "দিল্লি"],
+      "state": "Delhi",
+      "popular_areas": ["Red Fort", "India Gate", "Lotus Temple", "Qutub Minar"],
+      "cultural_significance": "Capital city with rich Mughal and British colonial history"
+    },
+    {
+      "name": "Mumbai",
+      "aliases": ["Bombay", "मुंबई", "মুম্বাই"],
+      "state": "Maharashtra",
+      "popular_areas": ["Gateway of India", "Marine Drive", "Elephanta Caves", "Chhatrapati Shivaji Terminus"],
+      "cultural_significance": "Financial capital and Bollywood hub"
+    },
+    {
+      "name": "Kolkata",
+      "aliases": ["Calcutta", "কলকাতা", "कोलकाता"],
+      "state": "West Bengal",
+      "popular_areas": ["Victoria Memorial", "Howrah Bridge", "Dakshineswar Temple", "Park Street"],
+      "cultural_significance": "Cultural capital known for literature, art, and festivals"
+    },
+    {
+      "name": "Chennai",
+      "aliases": ["Madras", "चेन्नई", "চেন্নাই"],
+      "state": "Tamil Nadu",
+      "popular_areas": ["Marina Beach", "Kapaleeshwarar Temple", "Fort St. George", "Mahabalipuram"],
+      "cultural_significance": "Detroit of India and classical music hub"
+    },
+    {
+      "name": "Bangalore",
+      "aliases": ["Bengaluru", "बैंगलोर", "ব্যাঙ্গালোর"],
+      "state": "Karnataka",
+      "popular_areas": ["Lalbagh Gardens", "Bangalore Palace", "Cubbon Park", "Tipu Sultan's Palace"],
+      "cultural_significance": "Silicon Valley of India and garden city"
+    },
+    {
+      "name": "Jaipur",
+      "aliases": ["Pink City", "जयपुर", "জয়পুর"],
+      "state": "Rajasthan",
+      "popular_areas": ["Hawa Mahal", "Amber Fort", "City Palace", "Jantar Mantar"],
+      "cultural_significance": "Pink City famous for royal palaces and forts"
+    },
+    {
+      "name": "Agra",
+      "aliases": ["आगरा", "আগরা"],
+      "state": "Uttar Pradesh",
+      "popular_areas": ["Taj Mahal", "Agra Fort", "Fatehpur Sikri", "Mehtab Bagh"],
+      "cultural_significance": "Home to the iconic Taj Mahal"
+    },
+    {
+      "name": "Goa",
+      "aliases": ["गोवा", "গোয়া"],
+      "state": "Goa",
+      "popular_areas": ["Baga Beach", "Basilica of Bom Jesus", "Anjuna Beach", "Dudhsagar Falls"],
+      "cultural_significance": "Coastal paradise with Portuguese heritage"
+    },
+    {
+      "name": "Hyderabad",
+      "aliases": ["हैदराबाद", "হায়দরাবাদ"],
+      "state": "Telangana",
+      "popular_areas": ["Charminar", "Golconda Fort", "Hussain Sagar", "Ramoji Film City"],
+      "cultural_significance": "City of pearls and biryani"
+    },
+    {
+      "name": "Pune",
+      "aliases": ["पुणे", "পুনে"],
+      "state": "Maharashtra",
+      "popular_areas": ["Shaniwar Wada", "Aga Khan Palace", "Sinhagad Fort", "Osho Ashram"],
+      "cultural_significance": "Oxford of the East and IT hub"
+    }
+  ]
+}

@@ -7,7 +7,8 @@ No app installations, no websites—just text (or voice!) and explore local stor
 
 ## 🎥 Demo
 
-> 📱 Try the bot (via WhatsApp sandbox): `Send "join your-code" to +1 415 523 8886`  
+> 📱 Try the bot (via WhatsApp sandbox): 
+`Send "join your-code" to +1 415 523 8886`  
 
 ## 🌟 Features
 
