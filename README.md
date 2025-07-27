@@ -1,161 +1,219 @@
-# 🤖 WhatsApp City Guide AI Bot 🇮🇳
+# 🤖 CityChai — Fully Generative Voice-First WhatsApp City Guide 🇮🇳
 
-A multilingual AI-powered city guide for Indian travelers that runs entirely through WhatsApp.  
-No app installations, no websites—just text (or voice!) and explore local stories directly in your chat.
+A conversational, multilingual, voice-enabled AI guide for Indian travelers—accessible entirely through WhatsApp.
 
----
+🚩 Problem Statement
+Travelers in India often face the challenge of finding reliable, local, and culturally rich information during their trips. Although India is one of the most traveled countries in the world, exploring its vast and diverse regions typically requires hiring a local guide — which can be expensive and sometimes inconvenient.
 
-## 🎥 Demo
+Moreover, India’s linguistic diversity—with dozens of languages and dialects—poses significant communication barriers for many travelers, especially on platforms like WhatsApp, where most chatbots are limited to English or offer repetitive, canned responses.
 
-> 📱 Try the bot (via WhatsApp sandbox): 
-`Send "join your-code" to +1 415 523 8886`  
+As a result, the experience of discovering cities and cultural treasures often feels impersonal, fragmented, and costly due to the need for a physical guide and language limitations.
 
-## 🌟 Features
+💡 Our Solution: CityChai
+CityChai is an advanced AI-powered assistant designed to solve these common travel pain points without any extra cost to the user.
 
-- 🌍 **Multilingual Support**: Understands English, Hindi, Bengali  
-- 🎭 **Mood-Aware Recommendations**: Adventurous, Curious, Relaxed, etc.  
-- 📱 **WhatsApp-First**: Fully functional over WhatsApp—no app or website needed  
-- 🗣️ **Voice Notes Support**: Send voice messages and get AI-powered suggestions  
-- 🧠 **GPT-Powered Storytelling**: Engaging, bite-sized cultural narratives  
-- 🔢 **Menu-Driven UX**: Easy replies with “1/2/3” to dive deeper  
-- 🎒 **Offline-Ready Logic**: Core logic works without user login or app  
-- 🗺️ **Hyperlocal Guidance**: Geolocation (by text) + dynamic storytelling  
-- 🔄 **Session Memory**: Remembers your city, mood & language over chat  
+It acts as a virtual local guide available 24/7 on WhatsApp, eliminating the need to hire costly human guides.
 
----
+Supports 13 major Indian languages, effectively bridging the language barrier.
 
-## 🚀 Quick Start (Dev/Test)
+Provides dynamic, personalized, and culturally contextual recommendations for any city or region in India.
 
-### 1. Installation
+Handles both text and voice inputs, enabling effortless interaction in user's preferred language.
 
-```
-git clone https://github.com//whatsapp-city-guide
-cd whatsapp-city-guide
-python -m venv venv
-source venv/bin/activate
-pip install -r requirements.txt
-```
+Offers rich storytelling and localized advice tailored to traveler’s mood, location, and preferences.
 
-### 2. Setup Environment
+Accessible freely via WhatsApp—no app downloads or additional payments required.
 
-Copy `.env.example` to `.env` and fill in:
+CityChai empowers every traveler to confidently explore India’s incredible cultural diversity and vast geography on their own terms, with instant, interactive, and dynamic AI-powered guidance.
+
+## 🏗️ Architecture Overview
+
+**How CityChai Processes a WhatsApp Query:**  
 
 ```
-TWILIO_ACCOUNT_SID=ACxxxxxxxxxxxxxxxxxxxx
-TWILIO_AUTH_TOKEN=xxxxxxxxxxxxxxxxxxxxxxx
-TWILIO_WHATSAPP_NUMBER=+14155238886
-OPENAI_API_KEY=sk-xxxxxxxxxxxxxxxxxxxx
-FLASK_DEBUG=True
-PORT=5000
-SECRET_KEY=hackathon-secret
+User on WhatsApp
+      │
+      ▼
+WhatsApp (Twilio Sandbox)
+      │ Webhook
+      ▼
+Flask Server (app.py)
+      │
+      ▼
+─────────────────────────────────
+│ Language Detection             │
+│ Mood & Location Extraction     │
+│ Conversation Context (Redis)   │
+─────────────────────────────────
+      │
+      ▼
+LLM API (Groq / OpenAI)
+      │
+      ▼
+───────────────────────────────
+│ If Story Mode:              │
+│   └─► TTS (gTTS)            │
+│   └─► Generate Audio File   │
+│ Else:                       │
+│   └─► Text Reply            │
+───────────────────────────────
+      │
+      ▼
+WhatsApp (via Twilio API)
+      │
+      ▼
+User receives personalized text or voice/story reply!
 ```
 
-### 3. Run the bot
-
-```
-python app.py
-```
-
-Expose with `ngrok`:
-
-```
-ngrok http 5000
-```
-
-### 4. Register Ngrok Webhook in Twilio
-
-Go to [WhatsApp Sandbox Settings](https://www.twilio.com/console/sms/whatsapp/sandbox) and:
-```
-Webhook: https://your-ngrok-id.ngrok.io/webhook
-```
-Then, send the join code via WhatsApp to start testing.
-
----
-
-## 🛠️ Tech Stack
-
-| Category        | Tools / Services                                      |
-|----------------|--------------------------------------------------------|
-| Language Model  | OpenAI GPT-3.5                                         |
-| Voice-to-Text   | Whisper / Google STT / Sarvam AI (for Hindi/Bengali)  |
-| Platform        | Twilio WhatsApp API (free sandbox)                    |
-| Framework       | Flask (Python 3.9+)                                    |
-| Session Mgmt    | In-memory (v1), Redis (ready for prod)                |
-| Hosting         | Local (ngrok), Render or Replit ready                 |
-| Data Storage    | JSON-based city/cultural data                         |
-
----
-
-## 🧪 Usage Examples
-
-### 1. **Text Query**
-```
-User: I'm in Jaipur and feeling curious
-Bot:
-1. Hawa Mahal – Palace of Winds hides secret royal stories.
-2. Amber Fort – Echoes of royal battles and mirrored halls.
-3. Jantar Mantar – India’s ancient star-watching playground.
-Reply 1/2/3 for more 📜
-```
-
-### 2. **Voice Message**
-User sends "Kolkata" or "मैं आगरा में घूमना चाहता हूँ" as voice note.  
-Bot responds with local stories depending on transcribed text.
-
----
-
-## 📁 Project Structure
+## 🗂️ Project Structure
 
 ```
 whatsapp-city-guide/
-├── app.py
-├── config.py
-├── requirements.txt
-├── .env
+├── app.py                    # Main Flask server and webhook handling
+├── config.py                 # Configuration (API keys, Twilio numbers, etc.)
+├── requirements.txt          # Python dependencies
+├── .env.example              # Sample environment variables template
 ├── models/
-│   ├── language_detector.py
-│   ├── mood_detector.py
-│   └── story_generator.py
+│   ├── llm_agent.py          # Groq/OpenAI LLM API integration
+│   ├── language_detector.py  # Multilingual language detection
+│   ├── mood_analyzer.py      # Mood and sentiment analysis
 ├── services/
-│   ├── whatsapp_service.py
-│   ├── speech_service.py
-│   └── cache_service.py
+│   ├── whatsapp_service.py   # Twilio WhatsApp API wrapper
+│   ├── speech_service.py     # Speech-to-text (Whisper)
+│   ├── tts_service.py        # Text-to-speech (gTTS)
+│   └── cache_service.py      # Redis session and cache handling
 ├── utils/
-│   ├── session_manager.py
-│   └── helpers.py
+│   └── location_extractor.py # Indian city/state/location extraction
 ├── data/
-│   ├── cities.json
-│   └── cultural_content.json
-└── README.md
+│   ├── languages.json        # 13-language configs and voice settings
+│   ├── cities.json           # Indian cities and related metadata
+│   ├── cultural_facts.json   # Cultural stories and facts for locations
+│   └── responses/            # Language-specific prompt templates
+│       ├── en_responses.json
+│       ├── hi_responses.json
+│       ├── bn_responses.json
+│       └── ... (and other language files)
+└── tests/
+    ├── test_voice_first_bot.py      # Multilingual automated tests
+    └── test_enhanced_multilingual.py
 ```
 
----
+## 🚀 Quick Start Guide — Run Locally
 
-## How It Works
+### 1. Clone and Install Dependencies
 
-1. **User sends message (text or voice) on WhatsApp**  
-2. **Bot detects language, city, and mood**  
-3. **AI generates 3 concise, story-driven local recommendations**  
-4. **User replies “1/2/3” for a deeper story, or sends a new city/mood**  
-5. **Session is remembered for seamless chat**
+```bash
+git clone [(https://github.com/Niloy1604/Whastapp_Tour_Guide.git)]
+cd whatsapp-city-guide
+python -m venv venv
+source venv/bin/activate      # Windows: venv\Scripts\activate
+pip install -r requirements.txt
+```
 
----
+### 2. Set up Environment Variables
 
-## Extending & Customizing
+Copy the example `.env.example` to `.env` and add your API keys and credentials:
 
-- To add more cities or languages, update `data/cities.json` and relevant model files.
-- To improve mood/city detection, tweak `models/language_detector.py` and `models/mood_detector.py`.
-- To add your own city stories, edit `data/cultural_content.json`.
+```ini
+# Twilio WhatsApp Sandbox config
+TWILIO_ACCOUNT_SID=ACxxxxxxxxxxxxxxxxxxxxx
+TWILIO_AUTH_TOKEN=your_auth_token_here
+TWILIO_PHONE_NUMBER=+14155238886  # Twilio WhatsApp sandbox number
 
----
+# LLM API keys
+GROQ_API_KEY=gsk_your_groq_api_key
+OPENAI_API_KEY=sk-your_openai_api_key
 
-## License
+# Redis
+REDIS_URL=redis://localhost:6379/0
+REDIS_PASSWORD=
 
-MIT License – Free for educational & hackathon use.
+# Flask server settings
+SECRET_KEY=your-secret-key
+FLASK_DEBUG=True
+```
 
----
+### 3. Start Redis (if using locally)
 
-## Authors & Support
+```bash
+redis-server
+```
 
-Built by Code Eclipse.  
-Pull requests and suggestions welcome!
+### 4. Run the Flask App
+
+```bash
+python app.py
+```
+
+You should see all services initialized and Flask running on `http://127.0.0.1:5000`.
+
+### 5. Expose Your Local Server to the Internet
+
+Use ngrok (or an equivalent tunneling service):
+
+```bash
+ngrok http 5000
+```
+
+Copy your public HTTPS ngrok URL.
+
+### 6. Configure Twilio WhatsApp Sandbox Webhook
+
+- Go to [Twilio Console WhatsApp Sandbox](https://www.twilio.com/console/sms/whatsapp/sandbox)
+- Set **"WHEN A MESSAGE COMES IN"** webhook to:
+
+```
+https://YOUR_NGROK_ID.ngrok.io/webhook
+```
+
+- On your WhatsApp, send the join code (e.g., `join orange-cat`) to the Twilio WhatsApp sandbox number.
+
+### 7. Start Chatting!
+
+Send text or voice messages in any supported Indian language to your sandbox number. Enjoy dynamic, voice-first, rich cultural replies powered by CityChai!
+
+## 🧪 Testing
+
+Run the automated multilingual tests to verify functionality:
+
+```bash
+python tests/test_voice_first_bot.py
+```
+
+or for enhanced testing:
+
+```bash
+python tests/test_enhanced_multilingual.py
+```
+
+The bot consistently passes 90%+ of tests across all 13 languages and voice/text modes.
+
+## 🔧 How It Works — Brief Summary
+
+1. **User sends a message or voice note on WhatsApp.**  
+2. **Twilio forwards this message via webhook to Flask app.**  
+3. The app detects user's **language**, **mood**, and **location**.  
+4. It **queries the LLM** (Groq/OpenAI) with dynamic prompts integrating context.  
+5. If a **story is requested**, LLM output is converted to voice via gTTS.  
+6. Bot responds via Twilio with either **text** or **audio message** on WhatsApp.  
+7. Conversation state is cached in Redis for contextual continuity.
+
+## 🏗️ This Project is Built With
+
+| Component            | Technology                  |
+|----------------------|-----------------------------|
+| Language Model       | Groq Llama3-8B, OpenAI GPT |
+| Speech-to-Text       | OpenAI Whisper              |
+| Text-to-Speech       | Google gTTS                 |
+| WhatsApp Integration | Twilio API                  |
+| Caching              | Redis                      |
+| Web Framework        | Flask (Python async)         |
+| Data Storage         | JSON for city & cultural data |
+
+## 📜 License & Contribution
+
+- Licensed under the MIT License.  
+- Contributions, issues, and suggestions are welcome via GitHub.  
+- Contact: ghoshnil3293639@gmail.com
+
+**CityChai empowers every traveler to explore India’s vibrant culture and hidden stories in their own language — all through WhatsApp with no apps or downloads!** 🇮🇳✨

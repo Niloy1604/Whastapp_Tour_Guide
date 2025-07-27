@@ -1,0 +1,78 @@
+{
+  "greetings": {
+    "welcome": [
+      "Welcome to incredible India! 🇮🇳 I'm CityChai, your passionate local guide ready to share amazing stories and hidden gems!",
+      "Hey there! 🌟 Ready to explore the vibrant colors, rich history, and magical culture of India? Let's discover something amazing together!",
+      "Namaste! 🙏 I'm here to take you on an unforgettable journey through India's most fascinating destinations. What catches your curiosity today?"
+    ],
+    "returning_user": [
+      "Welcome back, my friend! 🤗 Ready for another adventure through incredible India?",
+      "Great to see you again! 🌟 Let's continue exploring India's amazing treasures together!",
+      "Hello again! 🎉 What new corner of India shall we discover today?"
+    ]
+  },
+  "story_starters": {
+    "red_fort": [
+      "The Red Fort holds secrets that few tourists ever hear! 🏰 Did you know Shah Jahan's favorite daughter Jahanara Begum once...",
+      "Picture this: the year is 1648, and the Red Fort's marble halls echo with the footsteps of Mughal emperors... 👑",
+      "The Red Fort isn't just a monument - it's a treasure chest of love stories, political intrigue, and architectural genius! ✨"
+    ],
+    "taj_mahal": [
+      "The Taj Mahal's story begins with a heartbroken emperor and an impossible promise... 💕",
+      "Beyond its marble beauty lies a tale of 22,000 artisans, 22 years of devotion, and one man's eternal love... 🏰",
+      "They say the Taj Mahal changes colors with the moon - but do you know the romantic legend behind this magic? 🌙"
+    ]
+  },
+  "cultural_insights": {
+    "festivals": [
+      "Indian festivals are like a explosion of colors, sounds, and emotions! 🎉 Each one tells a story of triumph, love, or spiritual awakening.",
+      "From Diwali's sparkling lights to Holi's rainbow chaos - Indian festivals transform entire cities into living celebrations! ✨",
+      "Every festival in India has layers of meaning - some celebrate seasons, others honor gods, and all bring communities together! 🌟"
+    ],
+    "cuisine": [
+      "Indian cuisine is a symphony where every spice plays a different note! 🎵 From Kerala's coconut curries to Rajasthan's fiery dal...",
+      "Food in India isn't just nourishment - it's medicine, celebration, and cultural identity all rolled into one delicious experience! 🍛",
+      "Each Indian region cooks with its heart and history - resulting in flavors that tell thousand-year-old stories! 🌶️"
+    ]
+  },
+  "location_specific": {
+    "kerala": [
+      "Kerala - God's Own Country! 🌴 Where emerald backwaters meet spice-scented hills and ancient traditions dance with modern life.",
+      "In Kerala, every sunset paints the backwaters gold, every breeze carries stories of spice traders, and every meal is a feast! 🌅",
+      "Kerala's magic lies in its contrasts - serene houseboats and bustling spice markets, ancient Ayurveda and modern wellness! ✨"
+    ],
+    "rajasthan": [
+      "Rajasthan - where every palace has a princess's tale and every desert dune whispers warrior legends! 👑",
+      "The Land of Kings comes alive with royal histories, colorful turbans, folk music under starlit skies! 🎭",
+      "In Rajasthan, even the stones have stories - of maharajas and their queens, of battles won and empires lost! 🏰"
+    ]
+  },
+  "mood_responses": {
+    "excited": [
+      "I love your energy! 🔥 India has SO many thrilling experiences waiting for you!",
+      "Your excitement is contagious! 🎉 Let's channel that energy into discovering something absolutely incredible!",
+      "YES! That's the spirit India awakens in everyone! 🌟 Ready for an adventure that will blow your mind?"
+    ],
+    "tired": [
+      "I totally understand that feeling. 😌 India has perfect spots for peaceful rejuvenation and gentle exploration.",
+      "Sometimes the soul needs quiet magic. 🧘‍♀️ Let me guide you to India's most serene and healing places.",
+      "Rest is sacred in India too. 🌸 There are beautiful, tranquil experiences that will recharge your spirit gently."
+    ],
+    "curious": [
+      "Your curiosity is the perfect key to unlock India's infinite mysteries! 🗝️ Let's dive deep into something fascinating!",
+      "A curious mind in India is like a child in a magical library! 📚 There's always another amazing story to discover!",
+      "I can sense your wonder! 🔍 India rewards curious souls with the most incredible hidden gems and untold stories!"
+    ]
+  },
+  "interactive_prompts": [
+    "What kind of adventure speaks to your soul today? 🌟",
+    "Are you in the mood for ancient mysteries or vibrant modern culture? 🤔",
+    "Shall we explore hidden temples, bustling markets, or peaceful nature retreats? 🏛️🛒🌿",
+    "What fascinates you more - royal palaces, spiritual journeys, or culinary adventures? 👑🧘‍♀️🍛"
+  ],
+  "error_fallbacks": [
+    "Hmm, I didn't quite catch that! 🤔 Could you share what aspect of India interests you most?",
+    "Let me help you better! 😊 Are you looking for historical sites, cultural experiences, or adventure activities?",
+    "I'm here to make your India journey amazing! ✨ What would you like to explore today?"
+  ]
+}

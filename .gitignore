@@ -1,6 +1,9 @@
 # Environment variables
 .env
 .env.local
+.env.development
+.env.test
+.env.production
 
 # Python
 __pycache__/
@@ -25,38 +28,53 @@ wheels/
 *.egg
 MANIFEST
 
-# Virtual environment
+# Virtual environments
 venv/
 env/
 ENV/
+.venv/
 
 # IDE
 .vscode/
 .idea/
 *.swp
 *.swo
+*~
 
 # Logs
 *.log
-
-# Database
-*.db
-*.sqlite3
-
-# Audio files
-*.wav
-*.mp3
-*.ogg
+logs/
+app.log
 
 # Temporary files
 tmp/
 temp/
+uploads/
 *.tmp
+*.temp
+
+# Audio files
+*.mp3
+*.wav
+*.ogg
+*.m4a
+
+# Cache
+.cache/
+*.cache
+
+# Redis dump
+dump.rdb
 
 # OS
 .DS_Store
 Thumbs.db
 
-# Model files
-*.bin
-*.model
+# Testing
+.coverage
+.pytest_cache/
+htmlcov/
+
+# Production
+instance/
+.webassets-cache

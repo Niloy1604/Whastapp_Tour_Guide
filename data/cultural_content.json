@@ -1,23 +1,67 @@
 {
-  "cultural_stories": {
-    "Delhi": {
-      "Red Fort": {
-        "en": "The Red Fort witnessed the last Mughal emperor Bahadur Shah Zafar write poetry in prison before his exile.",
-        "hi": "लाल किले में अंतिम मुगल सम्राट बहादुर शाह जफर ने निर्वासन से पहले कारागार में कविताएं लिखी थीं।",
-        "bn": "লাল কেল্লায় শেষ মুগল সম্রাট বাহাদুর শাহ জাফর নির্বাসনের আগে কারাগারে কবিতা লিখেছিলেন।"
-      },
-      "India Gate": {
-        "en": "Every evening, the eternal flame flickers for 84,000 soldiers who never returned home from World War I.",
-        "hi": "हर शाम, प्रथम विश्वयुद्ध से वापस न लौटने वाले 84,000 सैनिकों के लिए शाश्वत ज्योति जलती रहती है।",
-        "bn": "প্রতি সন্ধ্যায়, প্রথম বিশ্বযুদ্ধ থেকে বাড়ি না ফেরা 84,000 সৈনিকের জন্য শাশ্বত শিখা জ্বলে।"
-      }
+  "red_fort": {
+    "en": {
+      "stories": [
+        "Shah Jahan built the Red Fort as his fortified palace, where he held court and lived with his family.",
+        "The last Mughal emperor Bahadur Shah Zafar was exiled from here after the 1857 revolt.",
+        "The famous 'Red Fort Speech' by Nehru on India's independence was delivered from its ramparts."
+      ],
+      "facts": [
+        "Built between 1638-1648 using red sandstone",
+        "UNESCO World Heritage Site since 2007",
+        "Houses the famous Peacock throne replica"
+      ]
     },
-    "Mumbai": {
-      "Gateway of India": {
-        "en": "Built to welcome King George V, it ironically became the exit point for the last British troops in 1948.",
-        "hi": "राजा जॉर्ज पंचम का स्वागत करने के लिए बनाया गया, यह 1948 में अंतिम ब्रिटिश सैनिकों का विदाई बिंदु बना।",
-        "bn": "রাজা পঞ্চম জর্জকে স্বাগত জানাতে নির্মিত, এটি 1948 সালে শেষ ব্রিটিশ সৈন্যদের বিদায় পয়েন্ট হয়ে উঠেছিল।"
-      }
+    "hi": {
+      "stories": [
+        "शाहजहाँ ने लाल किले को अपने दरबार और निवास के रूप में बनवाया था।",
+        "1857 के विद्रोह के बाद अंतिम मुगल सम्राट बहादुर शाह जफर को यहाँ से निर्वासित किया गया।",
+        "स्वतंत्रता दिवस पर प्रधानमंत्री यहाँ से राष्ट्र को संबोधित करते हैं।"
+      ],
+      "facts": [
+        "1638-1648 के बीच लाल बलुआ पत्थर से निर्मित",
+        "2007 से यूनेस्को विश्व धरोहर स्थल",
+        "प्रसिद्ध मयूर सिंहासन की प्रतिकृति यहाँ है"
+      ]
+    },
+    "bn": {
+      "stories": [
+        "শাহজাহান লাল কেল্লাকে তার দুর্গীকৃত প্রাসাদ হিসেবে নির্মাণ করেছিলেন।",
+        "১৮৫৭ সালের বিদ্রোহের পর শেষ মুগল সম্রাট বাহাদুর শাহ জাফরকে এখান থেকে নির্বাসিত করা হয়।",
+        "স্বাধীনতা দিবসে প্রধানমন্ত্রী এখানে জাতিকে উদ্দেশ্য করে ভাষণ দেন।"
+      ]
+    }
+  },
+  "kerala_backwaters": {
+    "en": {
+      "stories": [
+        "The backwaters were formed by rivers meeting the Arabian Sea over centuries.",
+        "Traditional houseboats called 'Kettuvallam' were once used to transport rice and spices.",
+        "The Chinese fishing nets in Kochi are a legacy of Chinese traders from 600 years ago."
+      ]
+    },
+    "ml": {
+      "stories": [
+        "കായലുകൾ നൂറ്റാണ്ടുകളായി നദികളും അറബിക്കടലും കൂടിച്ചേർന്ന് രൂപപ്പെട്ടതാണ്।",
+        "കെട്ടുവള്ളം എന്ന പരമ്പരാഗത ബോട്ടുകൾ അരിയും മസാലയും കടത്താൻ ഉപയോഗിച്ചിരുന്നു।",
+        "കൊച്ചിയിലെ ചൈനീസ് മീൻപിടിത്ത വലകൾ 600 വർഷം മുമ്പുള്ള ചൈനീസ് വ്യാപാരികളുടെ പാരമ്പര്യമാണ്।"
+      ]
+    }
+  },
+  "rajasthan_palaces": {
+    "hi": {
+      "stories": [
+        "उदयपुर का सिटी पैलेस 400 साल में 22 महाराजाओं द्वारा बनवाया गया।",
+        "जैसलमेर का सोनार किला आज भी जीवंत है, जहाँ लोग रहते हैं।",
+        "जयपुर को गुलाबी शहर इसलिए कहते हैं क्योंकि 1876 में प्रिंस ऑफ वेल्स के स्वागत में पूरे शहर को गुलाबी रंग से रंगा गया था।"
+      ]
+    },
+    "en": {
+      "stories": [
+        "Udaipur's City Palace was built over 400 years by 22 Maharajas.",
+        "Jaisalmer's Golden Fort is still a living fort with people residing inside.",
+        "Jaipur is called the Pink City because it was painted pink in 1876 to welcome Prince of Wales."
+      ]
     }
   }
 }

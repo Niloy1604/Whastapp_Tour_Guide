@@ -1,0 +1,470 @@
+{
+  "supported_languages": {
+    "en": {
+      "name": "English",
+      "native_name": "English",
+      "iso_code": "en",
+      "script": "Latin",
+      "region": "International",
+      "speakers": "125 million (India)",
+      "tts_supported": true,
+      "stt_supported": true,
+      "gtts_code": "en",
+      "whisper_code": "english",
+      "google_translate_code": "en",
+      "sample_phrases": {
+        "greeting": "Hello! Welcome to incredible India!",
+        "query_fort": "Tell me about the Red Fort",
+        "location_ask": "Where is the Red Fort located?",
+        "story_request": "Tell me a story about Indian history"
+      },
+      "cultural_context": {
+        "usage": "Official language, widely used in tourism and business",
+        "regions": "Pan-India, especially in metros and tourist areas"
+      },
+      "voice_settings": {
+        "speed": "normal",
+        "pitch": "medium",
+        "accent": "indian"
+      }
+    },
+    "hi": {
+      "name": "Hindi",
+      "native_name": "हिन्दी",
+      "iso_code": "hi",
+      "script": "Devanagari",
+      "region": "North and Central India",
+      "speakers": "602 million",
+      "tts_supported": true,
+      "stt_supported": true,
+      "gtts_code": "hi",
+      "whisper_code": "hindi",
+      "google_translate_code": "hi",
+      "sample_phrases": {
+        "greeting": "नमस्ते! अविश्वसनीय भारत में आपका स्वागत है!",
+        "query_fort": "लाल किले के बारे में बताओ",
+        "location_ask": "लाल किला कहाँ स्थित है?",
+        "story_request": "मुझे भारतीय इतिहास की कहानी सुनाओ"
+      },
+      "cultural_context": {
+        "usage": "Official language of India, widely spoken in North India",
+        "regions": "Delhi, UP, MP, Rajasthan, Haryana, Punjab, Bihar"
+      },
+      "voice_settings": {
+        "speed": "normal",
+        "pitch": "medium",
+        "accent": "indian"
+      },
+      "unicode_range": "\\u0900-\\u097F"
+    },
+    "bn": {
+      "name": "Bengali",
+      "native_name": "বাংলা",
+      "iso_code": "bn",
+      "script": "Bengali",
+      "region": "East India and Bangladesh",
+      "speakers": "300 million",
+      "tts_supported": true,
+      "stt_supported": true,
+      "gtts_code": "bn",
+      "whisper_code": "bengali",
+      "google_translate_code": "bn",
+      "sample_phrases": {
+        "greeting": "নমস্কার! অবিশ্বাস্য ভারতে আপনাকে স্বাগতম!",
+        "query_fort": "লাল কেল্লা সম্পর্কে বলুন",
+        "location_ask": "লাল কেল্লা কোথায় অবস্থিত?",
+        "story_request": "আমাকে ভারতীয় ইতিহাসের গল্প বলুন"
+      },
+      "cultural_context": {
+        "usage": "Official language of West Bengal, widely spoken in East India",
+        "regions": "West Bengal, Tripura, parts of Assam"
+      },
+      "voice_settings": {
+        "speed": "normal",
+        "pitch": "medium",
+        "accent": "bengali"
+      },
+      "unicode_range": "\\u0980-\\u09FF"
+    },
+    "ta": {
+      "name": "Tamil",
+      "native_name": "தமிழ்",
+      "iso_code": "ta",
+      "script": "Tamil",
+      "region": "South India and Sri Lanka",
+      "speakers": "78 million",
+      "tts_supported": true,
+      "stt_supported": true,
+      "gtts_code": "ta",
+      "whisper_code": "tamil",
+      "google_translate_code": "ta",
+      "sample_phrases": {
+        "greeting": "வணக்கம்! நம்பமுடியாத இந்தியாவிற்கு வருக!",
+        "query_fort": "சிவப்பு கோட்டை பற்றி சொல்லுங்கள்",
+        "location_ask": "சிவப்பு கோட்டை எங்கே அமைந்துள்ளது?",
+        "story_request": "இந்திய வரலாற்றின் கதையைச் சொல்லுங்கள்"
+      },
+      "cultural_context": {
+        "usage": "Official language of Tamil Nadu, ancient classical language",
+        "regions": "Tamil Nadu, Puducherry, parts of Karnataka and Kerala"
+      },
+      "voice_settings": {
+        "speed": "normal",
+        "pitch": "medium",
+        "accent": "tamil"
+      },
+      "unicode_range": "\\u0B80-\\u0BFF"
+    },
+    "te": {
+      "name": "Telugu",
+      "native_name": "తెలుగు",
+      "iso_code": "te",
+      "script": "Telugu",
+      "region": "South India",
+      "speakers": "82 million",
+      "tts_supported": true,
+      "stt_supported": true,
+      "gtts_code": "te",
+      "whisper_code": "telugu",
+      "google_translate_code": "te",
+      "sample_phrases": {
+        "greeting": "నమస్కారం! అద్భుతమైన భారతదేశానికి స్వాగతం!",
+        "query_fort": "ఎర్రకోట గురించి చెప్పండి",
+        "location_ask": "ఎర్రకోట ఎక్కడ ఉంది?",
+        "story_request": "భారతీయ చరిత్ర గురించి కథ చెప్పండి"
+      },
+      "cultural_context": {
+        "usage": "Official language of Andhra Pradesh and Telangana",
+        "regions": "Andhra Pradesh, Telangana, parts of Tamil Nadu"
+      },
+      "voice_settings": {
+        "speed": "normal",
+        "pitch": "medium",
+        "accent": "telugu"
+      },
+      "unicode_range": "\\u0C00-\\u0C7F"
+    },
+    "ml": {
+      "name": "Malayalam",
+      "native_name": "മലയാളം",
+      "iso_code": "ml",
+      "script": "Malayalam",
+      "region": "South India",
+      "speakers": "38 million",
+      "tts_supported": true,
+      "stt_supported": true,
+      "gtts_code": "ml",
+      "whisper_code": "malayalam",
+      "google_translate_code": "ml",
+      "sample_phrases": {
+        "greeting": "നമസ്കാരം! അവിശ്വസനീയമായ ഇന്ത്യയിലേക്ക് സ്വാഗതം!",
+        "query_fort": "ചുവന്ന കോട്ടയെക്കുറിച്ച് പറയൂ",
+        "location_ask": "ചുവന്ന കോട്ട എവിടെയാണ് സ്ഥിതി ചെയ്യുന്നത്?",
+        "story_request": "ഇന്ത്യൻ ചരിത്രത്തിന്റെ കഥ പറയൂ"
+      },
+      "cultural_context": {
+        "usage": "Official language of Kerala, known for literary richness",
+        "regions": "Kerala, Lakshadweep, parts of Tamil Nadu and Karnataka"
+      },
+      "voice_settings": {
+        "speed": "normal",
+        "pitch": "medium",
+        "accent": "malayalam"
+      },
+      "unicode_range": "\\u0D00-\\u0D7F"
+    },
+    "kn": {
+      "name": "Kannada",
+      "native_name": "ಕನ್ನಡ",
+      "iso_code": "kn",
+      "script": "Kannada",
+      "region": "South India",
+      "speakers": "44 million",
+      "tts_supported": true,
+      "stt_supported": true,
+      "gtts_code": "kn",
+      "whisper_code": "kannada",
+      "google_translate_code": "kn",
+      "sample_phrases": {
+        "greeting": "ನಮಸ್ಕಾರ! ಅದ್ಭುತ ಭಾರತಕ್ಕೆ ಸ್ವಾಗತ!",
+        "query_fort": "ಕೆಂಪು ಕೋಟೆಯ ಬಗ್ಗೆ ಹೇಳಿ",
+        "location_ask": "ಕೆಂಪು ಕೋಟೆ ಎಲ್ಲಿದೆ?",
+        "story_request": "ಭಾರತೀಯ ಇತಿಹಾಸದ ಕಥೆ ಹೇಳಿ"
+      },
+      "cultural_context": {
+        "usage": "Official language of Karnataka, rich cultural heritage",
+        "regions": "Karnataka, parts of Maharashtra and Andhra Pradesh"
+      },
+      "voice_settings": {
+        "speed": "normal",
+        "pitch": "medium",
+        "accent": "kannada"
+      },
+      "unicode_range": "\\u0C80-\\u0CFF"
+    },
+    "gu": {
+      "name": "Gujarati",
+      "native_name": "ગુજરાતી",
+      "iso_code": "gu",
+      "script": "Gujarati",
+      "region": "West India",
+      "speakers": "56 million",
+      "tts_supported": true,
+      "stt_supported": true,
+      "gtts_code": "gu",
+      "whisper_code": "gujarati",
+      "google_translate_code": "gu",
+      "sample_phrases": {
+        "greeting": "નમસ્તે! અવિશ્વસનીય ભારતમાં આપનું સ્વાગત છે!",
+        "query_fort": "લાલ કિલ્લા વિશે કહો",
+        "location_ask": "લાલ કિલ્લો ક્યાં સ્થિત છે?",
+        "story_request": "ભારતીય ઇતિહાસની વાર્તા કહો"
+      },
+      "cultural_context": {
+        "usage": "Official language of Gujarat, business and trade language",
+        "regions": "Gujarat, parts of Rajasthan and Maharashtra"
+      },
+      "voice_settings": {
+        "speed": "normal",
+        "pitch": "medium",
+        "accent": "gujarati"
+      },
+      "unicode_range": "\\u0A80-\\u0AFF"
+    },
+    "mr": {
+      "name": "Marathi",
+      "native_name": "मराठी",
+      "iso_code": "mr",
+      "script": "Devanagari",
+      "region": "West India",
+      "speakers": "83 million",
+      "tts_supported": true,
+      "stt_supported": true,
+      "gtts_code": "mr",
+      "whisper_code": "marathi",
+      "google_translate_code": "mr",
+      "sample_phrases": {
+        "greeting": "नमस्कार! अविश्वसनीय भारतात आपले स्वागत आहे!",
+        "query_fort": "लाल किल्ल्याबद्दल सांगा",
+        "location_ask": "लाल किल्ला कुठे आहे?",
+        "story_request": "भारतीय इतिहासाची गोष्ट सांगा"
+      },
+      "cultural_context": {
+        "usage": "Official language of Maharashtra, rich literary tradition",
+        "regions": "Maharashtra, parts of Gujarat and Karnataka"
+      },
+      "voice_settings": {
+        "speed": "normal",
+        "pitch": "medium",
+        "accent": "marathi"
+      },
+      "unicode_range": "\\u0900-\\u097F"
+    },
+    "pa": {
+      "name": "Punjabi",
+      "native_name": "ਪੰਜਾਬੀ",
+      "iso_code": "pa",
+      "script": "Gurmukhi",
+      "region": "North India",
+      "speakers": "33 million",
+      "tts_supported": true,
+      "stt_supported": true,
+      "gtts_code": "pa",
+      "whisper_code": "punjabi",
+      "google_translate_code": "pa",
+      "sample_phrases": {
+        "greeting": "ਸਤ ਸ੍ਰੀ ਅਕਾਲ! ਅਦਭੁਤ ਭਾਰਤ ਵਿੱਚ ਤੁਹਾਡਾ ਸੁਆਗਤ ਹੈ!",
+        "query_fort": "ਲਾਲ ਕਿਲ੍ਹੇ ਬਾਰੇ ਦੱਸੋ",
+        "location_ask": "ਲਾਲ ਕਿਲ੍ਹਾ ਕਿੱਥੇ ਹੈ?",
+        "story_request": "ਭਾਰਤੀ ਇਤਿਹਾਸ ਦੀ ਕਹਾਣੀ ਸੁਣਾਓ"
+      },
+      "cultural_context": {
+        "usage": "Official language of Punjab, vibrant cultural heritage",
+        "regions": "Punjab, Haryana, Delhi, Chandigarh"
+      },
+      "voice_settings": {
+        "speed": "normal",
+        "pitch": "medium",
+        "accent": "punjabi"
+      },
+      "unicode_range": "\\u0A00-\\u0A7F"
+    },
+    "or": {
+      "name": "Odia",
+      "native_name": "ଓଡ଼ିଆ",
+      "iso_code": "or",
+      "script": "Odia",
+      "region": "East India",
+      "speakers": "38 million",
+      "tts_supported": true,
+      "stt_supported": false,
+      "gtts_code": "or",
+      "whisper_code": "odia",
+      "google_translate_code": "or",
+      "sample_phrases": {
+        "greeting": "ନମସ୍କାର! ଅବିଶ୍ୱସନୀୟ ଭାରତରେ ଆପଣଙ୍କୁ ସ୍ୱାଗତ!",
+        "query_fort": "ଲାଲ୍ ଦୁର୍ଗ ବିଷୟରେ କୁହନ୍ତୁ",
+        "location_ask": "ଲାଲ୍ ଦୁର୍ଗ କେଉଁଠାରେ ଅଛି?",
+        "story_request": "ଭାରତୀୟ ଇତିହାସର କାହାଣୀ କୁହନ୍ତୁ"
+      },
+      "cultural_context": {
+        "usage": "Official language of Odisha, classical language status",
+        "regions": "Odisha, parts of West Bengal and Jharkhand"
+      },
+      "voice_settings": {
+        "speed": "normal",
+        "pitch": "medium",
+        "accent": "odia"
+      },
+      "unicode_range": "\\u0B00-\\u0B7F"
+    },
+    "as": {
+      "name": "Assamese",
+      "native_name": "অসমীয়া",
+      "iso_code": "as",
+      "script": "Bengali-like",
+      "region": "Northeast India",
+      "speakers": "15 million",
+      "tts_supported": false,
+      "stt_supported": false,
+      "gtts_code": "as",
+      "whisper_code": "assamese",
+      "google_translate_code": "as",
+      "sample_phrases": {
+        "greeting": "নমস্কাৰ! অবিশ্বাস্য ভাৰতলৈ আপোনাক স্বাগতম!",
+        "query_fort": "ৰঙা দুৰ্গৰ বিষয়ে কওক",
+        "location_ask": "ৰঙা দুৰ্গ ক'ত আছে?",
+        "story_request": "ভাৰতীয় ইতিহাসৰ কাহিনী কওক"
+      },
+      "cultural_context": {
+        "usage": "Official language of Assam, gateway to Northeast India",
+        "regions": "Assam, parts of Arunachal Pradesh"
+      },
+      "voice_settings": {
+        "speed": "normal",
+        "pitch": "medium",
+        "accent": "assamese"
+      },
+      "unicode_range": "\\u0980-\\u09FF"
+    },
+    "ur": {
+      "name": "Urdu",
+      "native_name": "اردو",
+      "iso_code": "ur",
+      "script": "Arabic",
+      "region": "North India",
+      "speakers": "70 million",
+      "tts_supported": true,
+      "stt_supported": true,
+      "gtts_code": "ur",
+      "whisper_code": "urdu",
+      "google_translate_code": "ur",
+      "sample_phrases": {
+        "greeting": "آداب! ناقابل یقین ہندوستان میں آپ کا خوش آمدید!",
+        "query_fort": "لال قلعہ کے بارے میں بتائیں",
+        "location_ask": "لال قلعہ کہاں واقع ہے؟",
+        "story_request": "ہندوستانی تاریخ کی کہانی سنائیں"
+      },
+      "cultural_context": {
+        "usage": "Literary and cultural language, shared with Hindi speakers",
+        "regions": "Delhi, UP, Bihar, Hyderabad, Kashmir"
+      },
+      "voice_settings": {
+        "speed": "normal",
+        "pitch": "medium",
+        "accent": "urdu"
+      },
+      "unicode_range": "\\u0600-\\u06FF"
+    }
+  },
+  "language_families": {
+    "Indo-European": {
+      "Indo-Aryan": ["hi", "bn", "gu", "mr", "pa", "or", "as", "ur"],
+      "description": "Languages derived from Sanskrit, share common grammatical structures"
+    },
+    "Dravidian": {
+      "South_Indian": ["ta", "te", "ml", "kn"],
+      "description": "Ancient language family of South India with unique grammatical features"
+    },
+    "International": {
+      "Germanic": ["en"],
+      "description": "International languages used in India"
+    }
+  },
+  "regional_usage": {
+    "North_India": ["hi", "pa", "ur"],
+    "South_India": ["ta", "te", "ml", "kn"],
+    "West_India": ["gu", "mr"],
+    "East_India": ["bn", "or", "as"],
+    "Pan_India": ["en", "hi"]
+  },
+  "technical_capabilities": {
+    "fully_supported": {
+      "languages": ["en", "hi", "bn", "ta", "te", "ml", "kn", "gu", "mr", "pa"],
+      "features": ["TTS", "STT", "Language Detection", "Translation", "Unicode Support"]
+    },
+    "partially_supported": {
+      "languages": ["or", "ur"],
+      "features": ["TTS", "Translation", "Unicode Support"],
+      "limitations": ["Limited STT support"]
+    },
+    "basic_support": {
+      "languages": ["as"],
+      "features": ["Translation", "Unicode Support"],
+      "limitations": ["No TTS/STT", "Limited voice features"]
+    }
+  },
+  "cultural_greetings": {
+    "formal": {
+      "en": "Welcome to India",
+      "hi": "भारत में आपका स्वागत है",
+      "bn": "ভারতে আপনাকে স্বাগতম",
+      "ta": "இந்தியாவிற்கு வருக",
+      "te": "భారతదేశానికి స్వాగతం",
+      "ml": "ഇന്ത്യയിലേക്ക് സ്വാഗതം",
+      "kn": "ಭಾರತಕ್ಕೆ ಸ್ವಾಗತ",
+      "gu": "ભારતમાં આપનું સ્વાગત",
+      "mr": "भारतात आपले स्वागत",
+      "pa": "ਭਾਰਤ ਵਿੱਚ ਤੁਹਾਡਾ ਸੁਆਗਤ",
+      "or": "ଭାରତରେ ଆପଣଙ୍କୁ ସ୍ୱାଗତ",
+      "as": "ভাৰতলৈ আপোনাক স্বাগতম",
+      "ur": "ہندوستان میں آپ کا خوش آمدید"
+    },
+    "casual": {
+      "en": "Hey there! Ready to explore India?",
+      "hi": "अरे वाह! भारत घूमने के लिए तैयार हो?",
+      "bn": "এই যে! ভারত ঘুরতে প্রস্তুত?",
+      "ta": "ஏய்! இந்தியாவை ஆராய தயாரா?",
+      "te": "ఏయ్! భారతదేశం అన్వేషించడానికి సిద్ధంగా ఉన్నారా?",
+      "ml": "ഹേയ്! ഇന്ത്യ പര്യവേക്ഷണം ചെയ്യാൻ തയ്യാറാണോ?",
+      "kn": "ಹೇ! ಭಾರತವನ್ನು ಅನ್ವೇಷಿಸಲು ಸಿದ್ಧರಿದ್ದೀರಾ?",
+      "gu": "અરે! ભારત એક્સપ્લોર કરવા તૈયાર છો?",
+      "mr": "अरे! भारत एक्सप्लोर करायला तयार आहात का?",
+      "pa": "ਓਏ! ਭਾਰਤ ਘੁੰਮਣ ਲਈ ਤਿਆਰ ਹੋ?",
+      "or": "ଅରେ! ଭାରତ ଘୁରିବାକୁ ପ୍ରସ୍ତୁତ?",
+      "as": "অৰে! ভাৰত ভ্ৰমণ কৰিবলৈ সাজু?",
+      "ur": "ارے! ہندوستان گھومنے کے لیے تیار ہو؟"
+    }
+  },
+  "error_messages": {
+    "language_not_supported": {
+      "en": "This language is not fully supported yet. Switching to English.",
+      "hi": "यह भाषा अभी पूरी तरह समर्थित नहीं है। अंग्रेजी पर स्विच कर रहे हैं।",
+      "bn": "এই ভাষাটি এখনও সম্পূর্ণভাবে সমর্থিত নয়। ইংরেজিতে পরিবর্তন করা হচ্ছে।"
+    },
+    "voice_not_available": {
+      "en": "Voice response not available for this language. Sending text response.",
+      "hi": "इस भाषा के लिए आवाज़ उत्तर उपलब्ध नहीं है। टेक्स्ट उत्तर भेज रहे हैं।",
+      "bn": "এই ভাষার জন্য ভয়েস রেসপন্স উপলব্ধ নয়। টেক্সট রেসপন্স পাঠানো হচ্ছে।"
+    }
+  },
+  "metadata": {
+    "version": "1.0.0",
+    "last_updated": "2025-01-27",
+    "total_languages": 13,
+    "fully_supported": 10,
+    "voice_enabled": 10,
+    "unicode_tested": true,
+    "cultural_context_included": true
+  }
+}

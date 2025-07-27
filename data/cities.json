@@ -1,46 +1,93 @@
 {
-  "cities": [
-    {
-      "name": "Delhi",
-      "aliases": ["New Delhi", "दिल्ली", "দিল্লি"],
+  "metros": {
+    "Delhi": {
       "state": "Delhi",
-      "popular_areas": ["Red Fort", "India Gate", "Lotus Temple", "Qutub Minar"],
-      "cultural_significance": "Capital city with rich Mughal and British colonial history"
+      "region": "North India",
+      "famous_for": ["Red Fort", "India Gate", "Qutub Minar"],
+      "languages": ["hi", "en", "ur"],
+      "best_time": "October to March",
+      "specialties": ["Mughal architecture", "street food", "political center"]
     },
-    {
-      "name": "Mumbai",
-      "aliases": ["Bombay", "मुंबई", "মুম্বাই"],
+    "Mumbai": {
       "state": "Maharashtra",
-      "popular_areas": ["Gateway of India", "Marine Drive", "Elephanta Caves", "Chhatrapati Shivaji Terminus"],
-      "cultural_significance": "Financial capital and Bollywood hub"
+      "region": "West India",
+      "famous_for": ["Gateway of India", "Marine Drive", "Bollywood"],
+      "languages": ["mr", "hi", "en"],
+      "best_time": "November to February",
+      "specialties": ["financial capital", "film industry", "street food"]
     },
-    {
-      "name": "Kolkata",
-      "aliases": ["Calcutta", "কলকাতা", "कोलकाता"],
-      "state": "West Bengal",
-      "popular_areas": ["Victoria Memorial", "Howrah Bridge", "Dakshineswar Temple", "Park Street"],
-      "cultural_significance": "Cultural capital known for literature, art, and festivals"
-    },
-    {
-      "name": "Chennai",
-      "aliases": ["Madras", "चेन्नई", "চেন্নাই"],
-      "state": "Tamil Nadu",
-      "popular_areas": ["Marina Beach", "Kapaleeshwarar Temple", "Fort St. George", "Mahabalipuram"],
-      "cultural_significance": "Detroit of India and classical music hub"
-    },
-    {
-      "name": "Bangalore",
-      "aliases": ["Bengaluru", "बैंगलोर", "ব্যাঙ্গালোর"],
+    "Bangalore": {
       "state": "Karnataka",
-      "popular_areas": ["Lalbagh Gardens", "Bangalore Palace", "Cubbon Park", "Tipu Sultan's Palace"],
-      "cultural_significance": "Silicon Valley of India and garden city"
+      "region": "South India",
+      "famous_for": ["Lalbagh", "Bangalore Palace", "IT hub"],
+      "languages": ["kn", "en", "hi"],
+      "best_time": "Year round",
+      "specialties": ["technology", "gardens", "pub culture"]
     },
-    {
-      "name": "Jaipur",
-      "aliases": ["Pink City", "जयपुर", "জয়পুর"],
-      "state": "Rajasthan",
-      "popular_areas": ["Hawa Mahal", "Amber Fort", "City Palace", "Jantar Mantar"],
-      "cultural_significance": "Pink City famous for royal palaces and forts"
+    "Chennai": {
+      "state": "Tamil Nadu",
+      "region": "South India",
+      "famous_for": ["Marina Beach", "Kapaleeshwarar Temple"],
+      "languages": ["ta", "en"],
+      "best_time": "November to February",
+      "specialties": ["cultural capital", "classical music", "filter coffee"]
+    },
+    "Kolkata": {
+      "state": "West Bengal",
+      "region": "East India",
+      "famous_for": ["Victoria Memorial", "Howrah Bridge"],
+      "languages": ["bn", "hi", "en"],
+      "best_time": "October to March",
+      "specialties": ["cultural heritage", "literature", "sweets"]
+    },
+    "Hyderabad": {
+      "state": "Telangana",
+      "region": "South India",
+      "famous_for": ["Charminar", "Golconda Fort", "Biryani"],
+      "languages": ["te", "hi", "en", "ur"],
+      "best_time": "November to February",
+      "specialties": ["IT hub", "pearls", "cuisine"]
     }
-  ]
+  },
+  "states": {
+    "Kerala": {
+      "region": "South India",
+      "capital": "Thiruvananthapuram",
+      "famous_cities": ["Kochi", "Alleppey", "Munnar", "Kumarakom"],
+      "languages": ["ml", "en"],
+      "specialties": ["backwaters", "spices", "Ayurveda", "beaches"],
+      "best_time": "September to March"
+    },
+    "Rajasthan": {
+      "region": "North India",
+      "capital": "Jaipur",
+      "famous_cities": ["Jaipur", "Udaipur", "Jodhpur", "Jaisalmer"],
+      "languages": ["hi", "raj", "en"],
+      "specialties": ["palaces", "desert", "forts", "culture"],
+      "best_time": "October to March"
+    },
+    "Goa": {
+      "region": "West India",
+      "capital": "Panaji",
+      "famous_cities": ["Panaji", "Margao", "Vasco"],
+      "languages": ["kok", "hi", "en", "mr"],
+      "specialties": ["beaches", "Portuguese heritage", "nightlife"],
+      "best_time": "November to February"
+    },
+    "Tamil Nadu": {
+      "region": "South India",
+      "capital": "Chennai",
+      "famous_cities": ["Chennai", "Madurai", "Coimbatore", "Ooty"],
+      "languages": ["ta", "en"],
+      "specialties": ["temples", "classical arts", "hill stations"],
+      "best_time": "November to February"
+    }
+  },
+  "hill_stations": {
+    "Shimla": {"state": "Himachal Pradesh", "altitude": "2276m"},
+    "Manali": {"state": "Himachal Pradesh", "altitude": "2050m"},
+    "Munnar": {"state": "Kerala", "altitude": "1600m"},
+    "Ooty": {"state": "Tamil Nadu", "altitude": "2240m"},
+    "Darjeeling": {"state": "West Bengal", "altitude": "2042m"}
+  }
 }
